@@ -1,0 +1,23 @@
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
+
+def student_menu():
+    return ReplyKeyboardMarkup(keyboard=[
+        [KeyboardButton(text="Мой профиль")],
+        [KeyboardButton(text="Мои посещения")],
+    ], resize_keyboard=True)
+
+def admin_menu():
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="➕ Открыть отметку", callback_data="admin:create")],
+        [InlineKeyboardButton(text="📋 Текущее занятие", callback_data="admin:current")],
+        [InlineKeyboardButton(text="🔒 Закрыть отметку", callback_data="admin:close")],
+        [InlineKeyboardButton(text="📊 Статус таблицы", callback_data="admin:sync")],
+    ])
+
+def attendance_button(lid):
+    return InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="Я присутствую", callback_data=f"attend:{lid}")]
+    ])
+
+def cancel_keyboard():
+    return ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text="Отмена")]], resize_keyboard=True)
