@@ -44,11 +44,11 @@ class Database:
 
     async def init(self):
         os.makedirs(os.path.dirname(self.path) or ".", exist_ok=True)
-                db = await self.connect()
+        db = await self.connect()
         try:
             await db.executescript(SCHEMA)
-            await db.commit()
-        finally:
+            await db.commit()python bot.py
+       finally:
             await db.close()
 
     async def import_students(self, rows):
