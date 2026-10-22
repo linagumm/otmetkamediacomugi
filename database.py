@@ -47,7 +47,7 @@ class Database:
         db = await self.connect()
         try:
             await db.executescript(SCHEMA)
-            await db.commit()python bot.py
+            await db.commit()
        finally:
             await db.close()
 
