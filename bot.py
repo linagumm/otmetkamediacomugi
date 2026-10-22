@@ -10,10 +10,10 @@ from aiogram.types import Message, CallbackQuery
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 
-from attendance_bot.config import load_settings
-from attendance_bot.database import Database
-from attendance_bot.keyboards import admin_menu, student_menu, attendance_button, cancel_keyboard
-from attendance_bot.sheets import SheetsSync
+from config import load_settings
+from database import Database
+from keyboards import admin_menu, student_menu, attendance_button, cancel_keyboard
+from sheets import SheetsSync
 
 settings = load_settings()
 db = Database(settings.database_path)
