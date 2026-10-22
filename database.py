@@ -48,7 +48,7 @@ class Database:
         try:
             await db.executescript(SCHEMA)
             await db.commit()
-       finally:
+        finally:
             await db.close()
 
     async def import_students(self, rows):
