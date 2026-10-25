@@ -1,6 +1,0 @@
-aiogram>=3.13,<4.0
-aiosqlite>=0.20,<1.0
-python-dotenv>=1.0,<2.0
-google-api-python-client>=2.140,<3.0
-google-auth>=2.34,<3.0
-tzdata>=2024.1
